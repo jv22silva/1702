@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido Especial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #ffcccb, #fff);
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #ff6b6b;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff6b6b;
+      color: white;
+      font-size: 1.2em;
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn:hover {
+      background-color: #ff4b4b;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+    img {
+      margin-top: 20px;
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    #newImage {
+      display: none; /* Esconde a nova imagem inicialmente */
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <h1>Quer Namorar Comigo?</h1>
+    <p>Eu pensei em várias maneiras de te pedir, mas achei que essa seria especial.<br> Espero que você diga "Sim"! ❤️</p>
+    <!-- Imagem inicial -->
+    <img id="initialImage" src="foto_inicial.jpg" alt="Foto inicial">
+    <!-- Botão -->
+    <br>
+    <a href="#" class="btn" onclick="showNewImage()">Sim, quero!</a>
+  </div>
+  <!-- Imagem final -->
+  <img id="newImage" src="nova_foto.jpg" alt="Foto surpresa">
+
+  <script>
+    function showNewImage() {
+      // Esconde todo o conteúdo do div #content
+      document.getElementById('content').style.display = 'none';
+
+      // Mostra a nova imagem
+      document.getElementById('newImage').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
+
+
